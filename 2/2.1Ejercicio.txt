@@ -1,0 +1,17 @@
+﻿1.1Ejercicio8:
+
+Sistema: Red informatica
+Entidades: Computadores (vertices)
+Forma de recopilar información: Registro de datos
+
+Buscar en la informacion de la red: cantidad de nodos (N), cantidad de canales (M), cantidad de partes del mensaje (Q), por cada uno de los canales la relacion que lo conforma, y por cada uno de las partes del mensaje el nodo origen y desrtino. 
+
+1.12Ejercicio13:
+
+Sistema: Cola
+Entidades: Personas
+Forma de recopilar información: Pensamiento creativo
+
+Hacer una lista por orden de llegada y una por orden de salida con la hora y nombre de la persona, luego asociar la lista de llegada con la de salida 
+
+

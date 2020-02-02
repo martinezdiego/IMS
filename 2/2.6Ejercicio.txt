@@ -1,0 +1,15 @@
+﻿Objetos:
+
+Vias
+Trafico
+Mantenimiento de vias
+Mantenimiento de vehiculos
+Rutas
+Seguridad
+Señales de transitos
+Tiempos de viaje
+
+Transformacion:
+
+Reorganizar
+Mejorar

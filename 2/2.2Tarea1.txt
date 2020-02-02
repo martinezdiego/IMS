@@ -1,0 +1,3 @@
+La escala de la calificaciones es de intervalos, porque los valores 
+ademas de ser numéricos y ordenables, la diferencia entre los valores
+tienen un significado es decir indican que tan bien salio en un examen

@@ -1,0 +1,5 @@
+1. Poblacion: Habitantes, Individuos: Ingreso anual
+2. Poblacion: Escuela, Individuos: Niños
+3. Poblacion: Sector Agrario, Individuos: Ventas anuales
+4. Poblacion:, Turista, Individuos: Opiniones
+5. Poblacion: Región, Individuos: Lluvia promedio

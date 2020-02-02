@@ -1,0 +1,11 @@
+﻿Restringir los vehiculos privados en ciertos dias
+Incrementar los vehiculos publicos a ciertas horas 
+Distribuir los vehiculos publicos a ciertas zonas
+Incrementar las escuelas en ciertas zonas
+Restringir motocicletas en ciertas zonas
+Restringir motocicletas a ciertas horas
+Incrementar lineas rapidas en ciertas zonas
+Decrementar las aceras en ciertas zonas
+Distribuir semaforos en ciertas zonas
+
+

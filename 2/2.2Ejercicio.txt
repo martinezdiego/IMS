@@ -1,0 +1,3 @@
+﻿Si la ubicación es en el plano no hay solucion, en cambio si es en el espacio si hay solucion porque usamos una dimension mas 
+
+La forma seria una piramide con base triangular equilatero y altura igual a los catetos de la base
