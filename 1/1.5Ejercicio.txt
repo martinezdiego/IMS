@@ -1,0 +1,3 @@
+Dado que el canal proviene tambien del rio, un cambio el flujo de entrada del canal implicaria 
+tambien un cambio en el flujo de entrada del rio por lo que esta relacion debe incluirse en
+el sistema

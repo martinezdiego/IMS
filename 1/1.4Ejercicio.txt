@@ -1,0 +1,4 @@
+﻿Si esta en un lugar hermetico, la cantidad de oxigeno en el aire es limitada y convertida
+a dioxido de carbono, por lo que el animal puede fallecer por falta de oxigeno. Es necesario 
+incluir otra entrada independiente de oxigeno que sea suficiente tomando en cuenta la 
+actividad del animal.

@@ -1,0 +1,3 @@
+﻿Un dispositivo que permita medir la salida (ventas esperadas) para poder comparar 
+con un valor de referencia y asi poder tomar decisiones sobre la variable de la 
+que dependen (precios)

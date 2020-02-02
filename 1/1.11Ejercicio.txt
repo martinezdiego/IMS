@@ -1,0 +1,1 @@
+﻿Los modelos economicos dependen directamente de las personas, porque estas son las que realizan las operaciones/transacciones economicas. Debido a esto es muy dificil hacer un modelo economico determinista porque no es posible determinar el comportamiento, animo, creencias, etc de las personas.

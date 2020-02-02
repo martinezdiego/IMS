@@ -1,0 +1,7 @@
+﻿Diego es un detective conocido como D. Ahora está preparando una defensa contra un posible ataque de piratas informáticos en una red informática importante.
+
+En esta red hay N vértices, algunos pares de vértices están conectados por M canales no dirigidos. Está previsto transferir Q mensajes importantes a través de esta red, el i-ésimo de estos debe enviarse desde el vértice s_i al vértice d_i a través de uno o más canales, quizás a través de algunos vértices intermedios.
+
+Para protegerse contra los ataques, se desarrolló un algoritmo especial. Desafortunadamente, solo se puede aplicar a la red que contiene canales dirigidos. Por lo tanto, como no se pueden crear nuevos canales, se decidió que cada uno de los canales no dirigidos existentes les permita transmitir datos sólo en una de las dos direcciones.
+
+Diego debe determinar si es posible elegir la dirección de cada canal para que cada uno de los mensajes Q pueda transmitirse con éxito.

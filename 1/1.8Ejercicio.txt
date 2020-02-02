@@ -1,0 +1,20 @@
+﻿E = 10 v
+R1  = 10 Ohm
+R2 = 10 Ohm
+
+OFF:
+
+I = E/R1
+I = 10 v/ 10 Ohm = 1 A
+
+ON:
+
+R paralelo = 1 / (1/R1 + 1/R2) 
+R paralelo = 1 / (1/10 Ohm + 1/ 10 Ohm)
+R paralelo = 1 / (2/10 Ohm)
+R paralelo = 5 Ohm
+
+I = E/R paralelo
+I = 10 v/ 5 Ohm = 2 A
+
+

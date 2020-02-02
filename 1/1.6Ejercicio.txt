@@ -1,0 +1,2 @@
+El tercer contaminante se produce mediante un proceso quimico, la generacion de este contaminante
+depende de los otros producidos por lo que es necesario incluir esta la relacion en el sistema

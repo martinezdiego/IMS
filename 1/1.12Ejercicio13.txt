@@ -1,0 +1,4 @@
+﻿Si el problema fuera un servicio de taquilla de un banco, y considerado la cola como el sistema algunos de los componentes que debemos considerar para realizar un modelo son: el número de clientes en la cola, tiempo de llegada/salida de cada cliente, tiempo actual del sistema, el orden de los clientes en la cola (first in, first out) 
+
+estas variables conforman el estado del sistema y nos describirian el comportamiento del mismo para cualquier instante de tiempo
+

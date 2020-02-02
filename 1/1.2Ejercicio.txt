@@ -1,0 +1,7 @@
+﻿En la delimitacion de un sistema ya se tiene definido la frontera, alcances 
+y objetivos del mismo. Al considerar una parte de un organismo/entidad como 
+sistema puede surgir el problema de cuando la informacion existente sobre el 
+mismo no puede determinar su funcion de entrada y salida, sino solo algunas 
+salidas posibles, y sus probabilidades. Por lo tanto el estudio de las partes 
+de un sistema en forma aislada no puede predecir su comportamiento cuando se 
+integran con su sitema, por lo que es una mala delimitación. 
