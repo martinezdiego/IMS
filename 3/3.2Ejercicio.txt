@@ -1,0 +1,3 @@
+Sistema de un Semáforo: Del modelo del semáforo, sabemos que tenemos una variable de estado que sería el estado (color) en el 
+que se encuentra dicho semáforo. Este modelo tiene una función que debe seguir ciertas reglas, como lo es el cambio de color 
+del mismo ya que no puede pasar de verde a rojo directamente y a su vez, un tiempo fijo en el que durara en cada color

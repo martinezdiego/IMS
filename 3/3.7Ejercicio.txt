@@ -1,0 +1,5 @@
+a. Lineal- Orden superior – Autónoma
+b. No Lineal – Primer Orden – Autónoma
+c. No lineal – Orden Superior – No autónoma
+d. No lineal – Orden Superior. No autónoma
+e. Lineal – Primer Orden – Autónoma 

@@ -1,0 +1,2 @@
+Azul = 0 ; Rojo = 1
+FA(Sa,Sb) = Sb                FB(Sa,Sb) = (Sa*Sb) – (-1)^t
