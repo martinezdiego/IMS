@@ -1,0 +1,11 @@
+S(k, n) = sumatoria desde k hasta n
+
+por definicion e^x = S(0, inf) x^k/k!
+
+X*v = Lambda*v
+X²*v = X*(Xv)
+Lambda*Xv = Lambda²*v
+
+por induccion X^n*v = Lambda^n*v
+
+e^x*v = S(0, inf)(x^k/k!)*v = S(0, inf) (Lambda^k/k!)*v = e^Lambda*v

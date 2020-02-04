@@ -1,0 +1,19 @@
+Sea una matriz A 
+Tr(A) = traza de A
+det(A) = determinante de A
+raiz(x) raiz cuadrada de x
+
+Lambda = [Tr(A) +- raiz(Tr(A)² - 4*det(A))]/2
+
+si det(A) < 0 
+
+Tr(A)² - 4*det(A) >= 0
+
+Re(x) = parte real de x
+
+Re(Lambda) = {
+    [Tr(A) + raiz(Tr(A)² - 4*det(A))]/2,
+    [Tr(A) - raiz(Tr(A)² - 4*det(A))]/2
+}
+
+los autovalores tienen signo diferente por lo que tenemos un punto de silla de montar en Lambda
