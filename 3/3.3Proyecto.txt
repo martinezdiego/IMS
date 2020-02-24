@@ -1,0 +1,3 @@
+Entidades:
+- Estudiantes: Dado que ellos toman decisiones sobre el flujograma
+- Asignaturas: Por que? 

@@ -1,0 +1,20 @@
+Variables:
+- Cantidad de asignaturas de la carrera (determinista)
+- Cantidad maxima de asignaturas por semestre del estudiante (probabilista)
+- Cantidad minima de semestres para graduarse (determinista)
+- Promedio global del estudiante (probabilista)
+- Promedio aprobatorio del estudiante (probabilista)
+- Promedio ponderado del estudiante (probabilista)
+- Cantidad de asignaturas aprovadas (determinista)
+- Cantidad de asignaturas cursadas (determinista)
+- Cantidad de asignaturas reprobadas *
+- Cantidad de asignaturas retiradas *
+- Cantidad de estudiantes en la simulacion (probabilista)
+- Tipo de estudiante {excelso|regular|aplazado} *  
+- Estado del estudiante {activo|expulsado|graduado|retirado} *
+
+Analisis E/S: 
+Registros/ Bases de datos  ->  | Sistema | -> Cantidad minima de semestres para graduarse
+
+Tipo de problema:
+Problema de deduccion o calculo directo

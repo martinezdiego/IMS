@@ -1,1 +1,8 @@
+Un estudiante Universitario (recien ingresado o no) para terminar sus estudios debe tomar y aprobar 
+los N cursos de su carrera. Los cursos pueden ser prerequisitos de otros cursos, esto significa que 
+si un curso A es prerequisito de un curso B, el estudiante debe aprobar el curso A antes de tomar el 
+curso B. Cuando un curso no tiene prerequisitos puede ser tomado en el cualquier semestre. Los estudiantes 
+saben que se les dificulta aprobar más de K materias en un semestre, por lo tanto no importa cuantos 
+cursos pueda tomar en un semestre, siempre tomaran máximo K.
+
 Cual seria la cantidad mínima de semestres para graduarse viendo máximo K materias?
