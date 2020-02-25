@@ -1,0 +1,10 @@
+Ejercicio 4,13
+
+x0 = 23 a = 11 b = 3 m = 25  
+	Cumplelas condiciones
+x0 = 23 a = 11 b = 3 m = 100
+	No cumple ya que m no es un valor de 2^k 
+x0 = 21 a = 11 b = 3 m = 100 
+	No cumple ya que m no es un valor de 2^k
+x0 = 23 a = 15 b = 5 m = 100
+	No cumple ya que m no es un valor de 2^k
