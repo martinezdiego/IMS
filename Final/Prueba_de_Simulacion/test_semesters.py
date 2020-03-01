@@ -1,4 +1,5 @@
 from heapq import heappop, heappush, heapify 
+from collections import deque 
 
 N = 10005
 graph = [[] for i in range(N)]
@@ -32,14 +33,14 @@ for i in range (n):
 ans = 0
 while (len(priority_queue)):
     ans += 1
-    queue = []
+    q = deque()
     count = 0
     while (len(priority_queue) and count < k):
         count += 1
         first, second = heappop(priority_queue)
         for i in graph[second]:
-            queue.append(i)
-    while (len(queue)):
-        heappush(priority_queue, [-1 * visited[queue[0]], queue[0]])
-        queue.pop(0)
+            q.append(i)
+    while (len(q)):
+        heappush(priority_queue, [-1 * visited[q[0]], q[0]])
+        q.popleft()
 print(ans)
