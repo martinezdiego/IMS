@@ -33,15 +33,18 @@ def build_priority_queue(graph, visited, edge, courses_size):
             heappush(priority_queue, [-1 * visited[i], i])
     return priority_queue
 
-def compute_min_semesters(priority_queue, graph, visited, min_semesters):
+def compute_min_semesters(priority_queue, graph, visited, seen, min_semesters):
     ans = 0
     while (len(priority_queue)):
         ans += 1
         q = deque()
         count = 0
+        while (len(priority_queue) and seen[priority_queue[0][1]]):
+            heappop(priority_queue)
         while (len(priority_queue) and count < min_semesters):
             count += 1
             first, second = heappop(priority_queue)
+            seen[second] = True
             for i in graph[second]:
                 q.append(i)
         while (len(q)):

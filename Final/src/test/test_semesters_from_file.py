@@ -40,13 +40,20 @@ for i in range (n):
         heappush(priority_queue, [-1 * visited[i + 1], i + 1])
 
 ans = 0
+seen = [False for i in range(N)]
+
 while (len(priority_queue)):
     ans += 1
     q = deque()
     count = 0
+    
+    while (seen[priority_queue[0][1]]):
+        heappop(priority_queue)
+        
     while (len(priority_queue) and count < k):
         count += 1
         first, second = heappop(priority_queue)
+        seen[second] = True
         for i in graph[second]:
             q.append(i)
     while (len(q)):
