@@ -36,14 +36,13 @@ te  = 0.0 # tiempo de espera total
 dt  = 0.0 # duracion de servicio total
 fin = 0.0 # minuto en el que finaliza
 
-def atencion(estudiante,i):
+def atencion(estudiante,i,min_semesters):
 	global dt  #Para poder acceder a la variable dt declarada anteriormente
 	R = random.random()  # Obtiene un numero aleatorio y lo guarda en R
 	tiempo = TIEMPO_ATENCION_MAX - TIEMPO_ATEMCION_MIN  
 	tiempo_atencion = TIEMPO_ATEMCION_MIN + (tiempo*R) # Distribucion uniforme
 	yield env.timeout(tiempo_atencion) # deja correr el tiempo n minutos
 	#time.sleep(1)
-	min_semesters.append(random.randint(1,6))
 	S_min_grado = pensum_graph(min_semesters[i])
 	print(" \t\t\t %s esta listo en %.2f minutos" % (estudiante,tiempo_atencion))
 	T_ATENCION.append(tiempo_atencion)
@@ -53,7 +52,7 @@ def atencion(estudiante,i):
 	b = 5
 	dt = dt + tiempo_atencion # Acumula los tiempos de uso 
 
-def estudiante (env, name, personal,i):
+def estudiante (env, name, personal,i,min_semesters):
 	global te
 	global fin
 	llega = env.now # Guarda el minuto de llegada del estudiante
@@ -66,7 +65,7 @@ def estudiante (env, name, personal,i):
 		te = te + espera # Acumula los tiempos de espera
 		print ("\t\t %s pasa con una secretaria en el minuto %.2f habiendo esperado %.2f minutos" % (name, pasa, espera))
 		T_ESPERA.append(espera)
-		yield env.process(atencion(name,i)) # Invoca al proceso de atencion
+		yield env.process(atencion(name,i,min_semesters)) # Invoca al proceso de atencion
 		#time.sleep(1)
 		deja = env.now #Guarda el minuto en que termina el proceso de atencion
 		print ("\t %s deja OREFI en el minuto %.2f" % (name, deja))
@@ -80,10 +79,11 @@ def principal (env, personal):
 	for i in range(TOT_ESTUDIANTES): # Para n Estudiantes
 		#	time.sleep(5)
 		R = random.random()
+		min_semesters.append(random.randint(1,6))
 		llegada = -T_LLEGADAS * math.log(R) # Distribucion exponencial
 		yield env.timeout(llegada)  # Deja transcurrir un tiempo entre uno y otro
 		#time.sleep(1)
-		env.process(estudiante(env, ESTUDIANTE_NOMBRE[i], personal,i))
+		env.process(estudiante(env, ESTUDIANTE_NOMBRE[i], personal,i,min_semesters))
 		i += 1
 
 os.system('clear')
