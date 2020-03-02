@@ -20,8 +20,8 @@ for index, row in data.iterrows():
     key = row['Requerido']
     value = row['Por Ver']
     if (not pd.isna(value)):
-        graph[courses_map[value]].append(courses_map[key])
-        edge[courses_map[key]] += 1
+        graph[courses_map[key]].append(courses_map[value])
+        edge[courses_map[value]] += 1
 
 k = int(input())
 n = len(courses_map)
