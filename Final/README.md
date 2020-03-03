@@ -11,4 +11,5 @@ Como correr
 ----------------------------
 Abre una venta de terminal en el directorio del proyecto
     
-`$ python3 Simulacion.py`
+    $ cd src/
+    $ python3 main.py
