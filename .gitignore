@@ -11,3 +11,4 @@
 # End of https://www.gitignore.io/api/libreoffice
 /Final/src/__pycache__/*
 /Final/src/TEST_SIMULACION__pycache__/*
+.vscode/

@@ -16,21 +16,23 @@ import pandas as pd
 import csv
 from pandas import read_csv
 
-from utils import compute_min_semesters, output, get_variables
+from utils import compute_min_semesters, output, get_variables, build_carrers_map
 
 os.system('clear')
 NUM_SECRETARIAS = int(input('\n\n Antes de empezar por favor ingrese el numero de secretarias que atenderan: '))
 TIEMPO_ATEMCION_MIN = 10
 TIEMPO_ATENCION_MAX = 15
 T_LLEGADAS = 3
-data = pd.read_excel(join('./db','Students_List.xlsx'))
+data = pd.read_excel(join('./db','students_list.xlsx'))
 T_ESPERA = []
 T_LLEGADA_EST = []
 T_ATENCION = []
 T_SALIDA = []
 S_MIN = []
 max_courses = []
- 
+
+carrers_map = build_carrers_map('./db/carrers_list.xlsx')
+
 te  = 0.0 # tiempo de espera total
 dt  = 0.0 # duracion de servicio total
 fin = 0.0 # minuto en el que finaliza
@@ -42,7 +44,7 @@ def atencion(estudiante,i,max_courses):
 	tiempo_atencion = TIEMPO_ATEMCION_MIN + (tiempo*R) # Distribucion uniforme
 	yield env.timeout(tiempo_atencion) # deja correr el tiempo n minutos
 	#time.sleep(1)
-	S_min_grado = compute_min_semesters(max_courses[i])
+	S_min_grado = compute_min_semesters(max_courses[i], carrers_map[ESTUDIANTE_CARRERA[i]])
 	print(" \t\t\t %s esta listo en %.2f minutos" % (estudiante,tiempo_atencion))
 	T_ATENCION.append(tiempo_atencion)
 	print(" \t\t\t Y la cantidad de semestres para graduarse serian: " + str(S_min_grado))
@@ -85,12 +87,12 @@ def principal (env, personal):
 
 os.system('clear')
 print ("\n\n\t\t------------------- Bienvenido Simulacion OREFI ------------------")
-TOT_ESTUDIANTES,ESTUDIANTE_NOMBRE = get_variables(data)
+TOT_ESTUDIANTES,ESTUDIANTE_NOMBRE, ESTUDIANTE_CARRERA = get_variables(data)
 env = simpy.Environment() # Crea el objeto entorno de simulacion
 personal = simpy.Resource(env, NUM_SECRETARIAS) #Crea los recursos (Secretarias)
 env.process(principal(env, personal)) #Invoca el proceso principal
 env.run() #Inicia la simulacion
-output(ESTUDIANTE_NOMBRE,max_courses,S_MIN,T_ESPERA,T_LLEGADA_EST,T_ATENCION,T_SALIDA,TOT_ESTUDIANTES)
+output(ESTUDIANTE_NOMBRE,ESTUDIANTE_CARRERA,max_courses,S_MIN,T_ESPERA,T_LLEGADA_EST,T_ATENCION,T_SALIDA,TOT_ESTUDIANTES)
 print ("\n---------------------------------------------------------------------")
 print ("\nIndicadores obtenidos: ")
 
