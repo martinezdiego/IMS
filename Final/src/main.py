@@ -45,9 +45,9 @@ def atencion(estudiante,i,max_courses):
 	yield env.timeout(tiempo_atencion) # deja correr el tiempo n minutos
 	#time.sleep(1)
 	S_min_grado = compute_min_semesters(max_courses[i], carrers_map[ESTUDIANTE_CARRERA[i]])
-	print(" \t\t\t %s esta listo en %.2f minutos" % (estudiante,tiempo_atencion))
+	print("\t[PROCESADO] %s esta listo en %.2f minutos" % (estudiante,tiempo_atencion))
 	T_ATENCION.append(tiempo_atencion)
-	print(" \t\t\t Y la cantidad de semestres para graduarse serian: " + str(S_min_grado))
+	print("\t[PROCESADO] Y la cantidad de semestres para graduarse serian: " + str(S_min_grado))
 	S_MIN.append(S_min_grado)
 	dt = dt + tiempo_atencion # Acumula los tiempos de uso 
 
@@ -55,19 +55,19 @@ def estudiante (env, name, personal,i,max_courses):
 	global te
 	global fin
 	llega = env.now # Guarda el minuto de llegada del estudiante
-	print ("%s llego a OREFI en minuto %.2f" % (name, llega))
+	print ("[LLEGA] %s en el minuto %.2f" % (name, llega))
 	T_LLEGADA_EST.append(llega)
 	with personal.request() as request: # Espera su turno
 		yield request # Obtiene turno
 		pasa = env.now # Guarda el minuto cuado comienza a ser atendido
 		espera = pasa - llega # Calcula el tiempo que espero
 		te = te + espera # Acumula los tiempos de espera
-		print ("\t\t %s pasa con una secretaria en el minuto %.2f habiendo esperado %.2f minutos" % (name, pasa, espera))
+		print ("[PASA] %s en el minuto %.2f habiendo esperado %.2f minutos" % (name, pasa, espera))
 		T_ESPERA.append(espera)
 		yield env.process(atencion(name,i,max_courses)) # Invoca al proceso de atencion
 		#time.sleep(1)
 		deja = env.now #Guarda el minuto en que termina el proceso de atencion
-		print ("\t %s deja OREFI en el minuto %.2f" % (name, deja))
+		print ("[SALE] %s en el minuto %.2f" % (name, deja))
 		T_SALIDA.append(deja)
 		fin = deja # Conserva globalmente el ultimo minuto de la simulacion
 	
