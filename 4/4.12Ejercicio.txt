@@ -1,0 +1,26 @@
+Ejercicio 4.12
+
+Chosen continuous distribution is: Log-normal (lnorm)
+Fitted parameters are:
+	meanlog 	sdlog
+	5.0164340	0.1337624
+
+La media de la hipotetica distribucion lognormal es igual a 5.0164 minutos y la desviacion estandar
+es de 0.13 minutos.
+
+Tratamos de ajustar los datos a una distribucion lognormal
+
+> library (MASS)
+> ajuste=fitdistr(x,"lognormal")
+> media=ajuste$estimate [1]
+> desviacion=ajuste$estimate [2]
+> ks.test(x,"plnorm",media,desviacion,aternative="two.sided")
+
+	One-sample Kolmogorov-Smirnov test
+
+data: x
+D = 0.16498, p-value = 0.5308
+alternative hypothesis: two-sided
+
+El valor p es igual a 0.5308 el cual es mayor que un nivel de significacion del 5%, por lo tanto
+los datos si se ajustan a una distribucion lognormal.

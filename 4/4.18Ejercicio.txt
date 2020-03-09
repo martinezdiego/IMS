@@ -1,0 +1,24 @@
+Ejercicio 4.18
+# A continuación creamos un vector vacío (en realidad está formado por 1000 ceros) donde almacenaremos los resultados que obtenemos:
+medias=numeric(1000)
+head(medias)
+length(medias)
+# Mediante este código repetiremos 1000 veces las siguientes acciones: extracción
+# de una muestra con reemplazamiento desde x, cálculo de la media muestral de esta
+# nueva réplica y almacenamiento de la media muestral obtenida en el vector
+# medias que hemos generado anteriormente:
+for(i in 1:1000)
+{
+muestra=sample(x, replace=T)
+medias[i]=mean(muestra)
+}
+# Evaluamos los resultados obtenidos:
+hist(medias) #un histograma de las medias
+library(MASS)
+# Aplicando la prueba KS
+ajuste=fitdistr(medias,"normal")
+media=ajuste$estimate[1]
+desviacion=ajuste$estimate[2]
+media
+desviacion
+ks.test(medias,"pnorm",media,desviacion,alternative="two.sided")
