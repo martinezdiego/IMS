@@ -40,8 +40,8 @@ fin = 0.0 # minuto en el que finaliza
 def atencion(estudiante,i,max_courses):
 	global dt  #Para poder acceder a la variable dt declarada anteriormente
 	R = random.random()  # Obtiene un numero aleatorio y lo guarda en R
-	tiempo = TIEMPO_ATENCION_MAX - TIEMPO_ATEMCION_MIN  
-	tiempo_atencion = TIEMPO_ATEMCION_MIN + (tiempo*R) # Distribucion uniforme
+	tiempo = TIEMPO_ATENCION_MAX - TIEMPO_ATENCION_MIN  
+	tiempo_atencion = TIEMPO_ATENCION_MIN + (tiempo*R) # Distribucion uniforme
 	yield env.timeout(tiempo_atencion) # deja correr el tiempo n minutos
 	#time.sleep(1)
 	S_min_grado = compute_min_semesters(max_courses[i], carrers_map[ESTUDIANTE_CARRERA[i]])
