@@ -20,9 +20,9 @@ from utils import compute_min_semesters, output, get_variables, build_carrers_ma
 
 os.system('clear')
 NUM_SECRETARIAS = int(input('\n\n Antes de empezar por favor ingrese el numero de secretarias que atenderan: '))
-TIEMPO_ATEMCION_MIN = 10
-TIEMPO_ATENCION_MAX = 15
-T_LLEGADAS = 3
+TIEMPO_ATENCION_MIN = int(input('\n\n Por favor ingrese el tiempo minimo de atencion: '))
+TIEMPO_ATENCION_MAX = int(input('\n\n Por favor ingrese el tiempo maximo de atencion: '))
+T_LLEGADAS = int(input('\n\n Por favor el tiempo promedio de llegadas del estudiante: '))
 data = pd.read_excel(join('./db','students_list.xlsx'))
 T_ESPERA = []
 T_LLEGADA_EST = []
